@@ -1,0 +1,47 @@
+.ToggleSelect {
+  display: flex;
+  flex-direction: column;
+  .ToggleSelect__Label {
+    font-size: 0.875rem;
+    color: @gray99;
+    margin-bottom: 8px;
+  }
+  .ButtonCustom {
+    width: 135px;
+    height: 36px;
+    color: @text-color;
+    background-color: @white;
+    font-weight: normal;
+    border: 1px solid @gray90;
+    text-transform: lowercase;
+  }
+  .ButtonCustom:hover {
+    background-color: @white;
+  }
+  .ButtonCustom span:first-letter {
+    text-transform: uppercase;
+  }
+  .ButtonCustom.Selected {
+    background-color: @green;
+    border: none;
+    font-weight: bold;
+    box-shadow: @box-shadow-base;
+  }
+}
+
+.ToggleSelect.Disabled {
+  .ButtonCustom.Disabled {
+    border: 1px solid @gray90;
+    background-color: @white;
+  }
+  .ButtonCustom.Disabled:hover {
+    background-color: @white;
+  }
+  .ButtonCustom.Selected {
+    background-color: @fadegreen;
+    border: none;
+  }
+  .ButtonCustom.Selected:hover {
+    background-color: @fadegreen;
+  }
+}

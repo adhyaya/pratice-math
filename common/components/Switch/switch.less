@@ -1,0 +1,28 @@
+.Switch {
+  position: relative;
+  .Switch__Label {
+    font-size: 0.75rem;
+    color: @input-label-color;
+    margin-bottom: 15px;
+  }
+
+  .Switch__Text {
+    font-weight: bold;
+    color: #4c4c4c;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  .Error {
+    &:extend(.Switch__Label);
+    color: @error-color;
+  }
+  
+  .Switch__Error {
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    color: @error-color;
+  }
+}

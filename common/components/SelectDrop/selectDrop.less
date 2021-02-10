@@ -1,0 +1,140 @@
+.SelectDrop {
+  position: relative;
+  min-height: 78px;
+  width: 100%;
+  .LabelText {
+    font-size: 0.875rem;
+    color: @gray99;
+  }
+  .SelectWrap {
+    width: 275px;
+    position: relative;
+  }
+  .DropList {
+    max-height: 200px !important;
+    min-height: 36px;
+    background: @white;
+    border-radius: 4px; 
+    box-shadow: @box-shadow-dropbox;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 48px;
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .DropListItem,
+  .DropListItemMulti {
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    outline: none;
+    input {
+      width: calc(100% - 15px);
+    }
+    span:last-child {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .DropListItemMulti.ant-checkbox-wrapper {
+    margin-left: 0; 
+    max-height: 36px;
+  }
+  .Select{
+    width: 275px;
+    height: 36px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: @box-shadow-dropbox;
+    border: none;
+    padding: 10px 25px 10px 8px;
+    outline: none;
+    position: absolute;
+    top: 6px;
+    cursor: default;
+    color: @graydark;
+  }
+  .Select.Disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .Selected-ReadOnly {
+    width: 275px;
+  }
+  .SelectedItemsWrap {
+    max-height: 92px;
+    margin-top: 54px;
+    overflow-y: auto;
+    border: 1px solid @gray95;
+    margin-bottom: 10px;
+  }
+  .SelectedItemsWrap.Readonly {
+    margin-top: 19px;
+  }
+  .SelectedItem {
+    width: auto;
+    height: 24px;
+    border-radius: 12px;
+    background-color: @gray95;
+    padding: 6px;
+    margin: 2px;
+    display: flex;
+    align-content: center;
+  }
+
+  input:focus {
+    border: 1px solid @matterhorn;
+  }
+  input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .Error-Border {
+    border: 1px solid @error-color;
+  }
+  .Error-Text {
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    color: @error-color;
+  }
+
+  .DropListItemMulti {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .Drop-Arrow {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    pointer-events: none;
+  }
+
+  .ant-checkbox-inner {
+    height: 14px;
+    width: 14px;
+  }
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: @highlight-color;
+    border-radius: 2px;
+  }
+
+  .ant-checkbox-checked:after {
+    --antd-wave-shadow-color: @matterhorn;
+    border: unset;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner::after {
+    border: 1.5px solid @matterhorn;
+    border-top: 0;
+    border-left: 0;
+    left: 16%;
+  }
+}
