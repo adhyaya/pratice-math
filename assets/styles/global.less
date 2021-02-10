@@ -1,0 +1,111 @@
+@import './variables.less';
+
+.font-face(@font-family, @filepath){
+  @font-face {
+      font-family: @font-family;
+      font-display: swap;
+      src: url('@{filepath}.woff');
+  }
+}
+
+.font-face('Calibri', '/fonts/Calibri');
+
+body {
+  .Box--Shadow {
+    box-shadow: @box-shadow-base;
+  }
+
+  .Primary, .Error {
+    color: @red;
+  }
+
+  .Font--S14 {
+    font-size: 0.875rem;
+  }
+
+  .Font--WB {
+    font-weight: bold; 
+  }
+
+  .Flex {
+    display: flex;
+  }
+
+  .AlignItems--Center {
+    align-items: center;
+  }
+
+  .Ml-5 {
+    margin-left: 5px; 
+  }
+
+  .Ml-8 {
+    margin-left: 8px;
+  }
+
+  .Ml-10 {
+    margin-left: 10px; 
+  }
+
+  .Ml-12 {
+    margin-left: 12px; 
+  }
+
+  .Ml-15 {
+    margin-left: 15px;
+  }
+
+  .Mt-5 {
+    margin-top: 5px;
+  }
+
+  .Mt-8 {
+    margin-top: 5px;
+  }
+
+  .Mt-10 {
+    margin-top: 10px;
+  }
+
+  .Mt-12 {
+    margin-top: 12px;
+  }
+
+  .Mt-15 {
+    margin-top: 15px;
+  }
+
+  .Mt-20 {
+    margin-top: 20px;
+  }
+
+  .Mt-30 {
+    margin-top: 30px;
+  }
+
+  .ant-notification {
+    width: 300px;
+    margin-right: 40px; 
+  }
+
+  .ant-notification-notice-icon svg {
+    vertical-align: middle;
+  }
+
+  .ant-notification-notice-with-icon .ant-notification-notice-message {
+    font-size: 1rem;
+    color: @error-color;
+    font-weight: bold;
+  }
+
+  .ant-notification-notice-with-icon .ant-notification-notice-description {
+    .Font--S14();
+  }
+  .ant-btn{
+    background-color: green;
+    color: white;
+    width: 360px;
+    border-radius: 4px;
+    text-transform: capitalize;
+  }
+}

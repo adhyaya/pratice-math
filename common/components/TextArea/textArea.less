@@ -1,0 +1,49 @@
+.TextArea {
+  position: relative;
+  height: 70px;
+  .TextArea__Label {
+    font-size: 0.75rem;
+    color: @input-label-color;
+    margin-bottom: 8px;
+  }
+  
+  .Error {
+    &:extend(.TextArea__Label);
+    color: @error-color;
+  }
+  
+  .Error--Border {
+    &:extend(.Box--Shadow);
+    border: 1px solid @error-color;
+  }
+  
+  .ant-input {
+    border-radius: 4px; 
+    font-size: 0.875rem;
+    padding: 12px 8px 9px 8px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    resize: none;
+  }
+  
+  .ant-input:focus {
+    border: 1px solid @input-focus-border-color;
+    outline: 1;
+    -webkit-box-shadow: @box-shadow-base;
+    box-shadow: @box-shadow-base;
+    border-right-width: 1px !important;
+  }
+  
+  .ant-input:hover {
+    border-right-width: 1px !important;
+  }
+  
+  .TextArea__Error {
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    color: @error-color;
+  }
+}

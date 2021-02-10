@@ -1,0 +1,38 @@
+.Input {
+  position: relative;
+  .Input__Label {
+    font-size: 12px;
+    color: @input-label-color;
+  }
+
+  .Error {
+    &:extend(.Input__Label);
+    color: @error-color;
+  }
+
+  .Error--Border {
+    &:extend(.Box--Shadow);
+    border: 1px solid @error-color;
+  }
+
+  .ant-input {
+    border-radius: 4px; 
+    font-size: 0.875rem;
+  }
+
+  .ant-input:focus {
+    border: 1px solid @input-focus-border-color;
+    outline: 1;
+    -webkit-box-shadow: @box-shadow-base;
+    box-shadow: @box-shadow-base;
+    border-right-width: 1px !important;
+  }
+
+  .Input__Error {
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    color: @error-color;
+  }
+}
